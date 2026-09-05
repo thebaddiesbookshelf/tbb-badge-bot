@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unauthorized - Badge Bot</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="landing-page">
+    <div class="landing-content">
+      <div class="error-icon">❌</div>
+      <h1>Access Denied</h1>
+      <p class="subtitle">You don't have permission to access this dashboard.</p>
+      <p>Only authorized staff members can access the management panel.</p>
+      
+      <% if (user) { %>
+        <div class="user-info">
+          <img src="https://cdn.discordapp.com/avatars/<%= user.id %>/<%= user.avatar %>.png" alt="Avatar">
+          <span><%= user.username %></span>
+        </div>
+        <a href="/logout" class="btn btn-secondary">Logout</a>
+      <% } else { %>
+        <a href="/" class="btn btn-primary">Go Home</a>
+      <% } %>
+    </div>
+  </div>
+</body>
+</html>
+

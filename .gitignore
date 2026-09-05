@@ -1,0 +1,5 @@
+node_modules/
+.env
+badges/
+*.log
+config.json
